@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Christian | Developer",
-  description: "Portfolio website for educational purposes",
+  title: "Sagar Trushna Panigrahi | Full Stack Developer",
+  description: "Welcome to my portfolio website showcasing my projects and skills.",
 };
 
 export default function RootLayout({
@@ -14,12 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-        />
+        <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

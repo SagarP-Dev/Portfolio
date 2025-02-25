@@ -3,12 +3,12 @@ import Container from "@/components/Container";
 import Input, { Label } from "@/components/Input";
 import { CheckCircle, Loader, MoveUpRight } from "lucide-react";
 import React, { FormEvent, useState } from "react";
-import { motion } from "framer-motion"; // Fixed import
+import { motion } from "framer-motion"; 
 
 const ContactPage = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(""); // Store error messages
+  const [errorMessage, setErrorMessage] = useState(""); 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,12 +37,12 @@ const ContactPage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "030f91d9-15ab-49bc-bb8e-36cd02bfa2cc", // Ensure correct key
+          access_key: "030f91d9-15ab-49bc-bb8e-36cd02bfa2cc", 
           ...formData,
         }),
       });
 
-      const data = await response.json(); // Get response
+      const data = await response.json(); 
 
       if (response.ok && data.success) {
         setFormData({ name: "", email: "", interest: "", message: "" });
@@ -174,7 +174,7 @@ const ContactPage = () => {
                   Success!
                 </h2>
                 <p className="mt-2 text-base font-medium text-gray-600">
-                  Your message has been sent successfully. We'll get back to you soon!
+                  Your message has been sent successfully. We&apos;ll get back to you soon!
                 </p>
               </div>
               <div className="mt-5 bg-primary/80 text-primaryWhite py-2 rounded-lg font-semibold tracking-wide hover:bg-primary hoverEffect">
