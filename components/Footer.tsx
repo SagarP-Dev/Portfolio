@@ -12,12 +12,12 @@ const Footer = () => {
         <div className="flex flex-col gap-3 lg:col-span-3">
           <Logo className="w-[88px]">Sagar</Logo>
           <p className="text-sm tracking-wide">
-            Built with 💙 by Sagar Trushna Panigrahi. Let's create something amazing together!
+            Built with 💙 by Sagar Trushna Panigrahi. Let&apos;s create something amazing together!
           </p>
           <SocialLinks />
         </div>
         <div className="hidden lg:inline-flex" />
-        {/* Aligned links towards the right */}
+        
         <div className="lg:col-span-4 flex justify-end">
           {footerLinks?.map((item) => (
             <div key={item?.title} className="text-right"> 

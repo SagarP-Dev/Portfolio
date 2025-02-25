@@ -7,7 +7,7 @@ import { ArrowDown } from "lucide-react";
 import React from "react";
 
 const ProjectsPage = () => {
-  // Function to handle smooth scrolling
+ 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects-section");
     if (projectsSection) {
@@ -36,7 +36,7 @@ const ProjectsPage = () => {
         </Container>
       </section>
 
-      {/* Added ID for smooth scrolling */}
+      
       <div id="projects-section">
         <Projects />
       </div>

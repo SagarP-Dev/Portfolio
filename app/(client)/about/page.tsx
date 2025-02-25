@@ -40,7 +40,7 @@ const BlogPage = () => {
           like React and Node.js.
 
           I enjoy writing clean and efficient code while continuously learning and exploring new 
-          technologies. Whether it's crafting engaging front-end experiences or developing 
+          technologies. Whether it&apos;s crafting engaging front-end experiences or developing 
           scalable back-end solutions, I strive to create impactful digital experiences.
           </p>
           <p className="text-darkColor/80 mb-4">
