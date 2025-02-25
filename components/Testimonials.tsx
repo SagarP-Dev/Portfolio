@@ -19,7 +19,7 @@ const data = [
     title: "Certifications & Achievements",
     description:
       "Completed courses and certifications to enhance my skills in full-stack development. Actively participating in coding challenges and hackathons.",
-    },
+  },
   {
     title: "Open Source Contributions",
     description:
@@ -31,26 +31,31 @@ const Testimonials = () => {
   return (
     <div className="bg-darkOrange/10 py-20 md:py-24">
       <Container>
-        <Carousel>
-          <CarouselContent>
-            {data?.map((item, index) => (
-              <CarouselItem
-                key={index}
-                className="flex flex-col items-center justify-center gap-5 md:gap-7"
-              >
-                <h2 className="text-5xl font-bold tracking-wide">
-                  {item?.title}
-                </h2>
-                <p className="tracking-wide text-center leading-7 max-w-6xl">
-                  {item?.description}
-                </p>
-                
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="relative">
+          <Carousel>
+            <CarouselContent>
+              {data?.map((item, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex flex-col items-center justify-center gap-5 md:gap-7 pb-10"
+                >
+                  <h2 className="text-4xl md:text-5xl font-bold tracking-wide text-center">
+                    {item?.title}
+                  </h2>
+                  <p className="tracking-wide text-center leading-7 max-w-6xl px-4">
+                    {item?.description}
+                  </p>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            
+            <div className="absolute top-1/2 -translate-y-1/2 left-3 right-3 md:left-8 md:right-8 flex justify-between px-6">
+              <CarouselPrevious className="w-14 h-14 flex items-center justify-center bg-white/90 rounded-full shadow-lg text-lg" />
+              <CarouselNext className="w-14 h-14 flex items-center justify-center bg-white/90 rounded-full shadow-lg text-lg" />
+            </div>
+          </Carousel>
+        </div>
       </Container>
     </div>
   );
