@@ -71,10 +71,11 @@ const ContactPage = () => {
 
         
         <div className="flex-1 w-full max-w-2xl">
-          <h2 className="font-bold text-2xl md:text-4xl leading-tight md:leading-[50px] mb-6 text-center md:text-left">
-            Love to hear from you, <br />
-            Get in touch 👋
-          </h2>
+        <h2 className="font-bold text-2xl md:text-4xl leading-tight md:leading-[50px] mb-6 text-center md:text-left">
+        Love to hear from you,&nbsp;<br />
+        Get in touch 👋
+        </h2>
+
 
           <form className="space-y-5" onSubmit={handleSubmit}>
             <input type="hidden" name="access_key" value="030f91d9-15ab-49bc-bb8e-36cd02bfa2cc" />
