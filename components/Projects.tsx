@@ -7,14 +7,14 @@ import { cn } from "@/lib/utils";
 
 const data = [
   {
-    title: "I&apos;ve developed a fully functional real-time chat application using the MERN Stack (MongoDB, Express, React, Node.js). ",
+    title: "I've developed a fully functional real-time chat application using the MERN Stack (MongoDB, Express, React, Node.js). ",
     href: "http://chat-app-41ge.onrender.com/",
     image: projectOne,
     publishedAt: "February 11, 2025",
     category: "Chat Application",
   },
   {
-    title: "I&apos;m thrilled to unveil my latest creation - Fresh Fruit Finds - a project I&apos;ve built using React.js, a powerful JavaScript library for building dynamic and responsive user interfaces.",
+    title: "I'm thrilled to unveil my latest creation - Fresh Fruit Finds - a project I&apos;ve built using React.js, a powerful JavaScript library for building dynamic and responsive user interfaces.",
     href: "https://fresh-fruit-finds.vercel.app/",
     image: projectTwo,
     publishedAt: "April 21, 2024",

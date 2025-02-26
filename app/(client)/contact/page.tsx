@@ -3,12 +3,12 @@ import Container from "@/components/Container";
 import Input, { Label } from "@/components/Input";
 import { CheckCircle, Loader, MoveUpRight } from "lucide-react";
 import React, { FormEvent, useState } from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,12 +37,12 @@ const ContactPage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "030f91d9-15ab-49bc-bb8e-36cd02bfa2cc", 
+          access_key: "030f91d9-15ab-49bc-bb8e-36cd02bfa2cc",
           ...formData,
         }),
       });
 
-      const data = await response.json(); 
+      const data = await response.json();
 
       if (response.ok && data.success) {
         setFormData({ name: "", email: "", interest: "", message: "" });
@@ -60,23 +60,27 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
-      <Container className="flex gap-10 items-center md:gap-20 py-20">
-        <div>
+    <div className="px-4 md:px-0">
+      <Container className="flex flex-col md:flex-row items-center gap-10 md:gap-20 py-10 md:py-20">
+        {/* Left-side decoration (hidden on small screens) */}
+        <div className="hidden md:block">
           <div className="w-[2px] h-28 bg-primary/30">
             <div className="w-full h-[80%] bg-primary" />
           </div>
         </div>
 
-        <div className="flex-1 max-w-4xl">
-          <h2 className="font-bold text-2xl md:text-4xl md:leading-[50px] mb-2">
+        
+        <div className="flex-1 w-full max-w-2xl">
+          <h2 className="font-bold text-2xl md:text-4xl leading-tight md:leading-[50px] mb-6 text-center md:text-left">
             Love to hear from you, <br />
             Get in touch 👋
           </h2>
+
           <form className="space-y-5" onSubmit={handleSubmit}>
             <input type="hidden" name="access_key" value="030f91d9-15ab-49bc-bb8e-36cd02bfa2cc" />
 
-            <div className="flex flex-1 flex-col md:flex-row items-center gap-3 md:gap-10 lg:gap-20">
+            
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
               <div className="flex flex-col w-full">
                 <Label htmlFor="name">Your name</Label>
                 <Input
@@ -103,20 +107,20 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-1 flex-col md:flex-row items-center gap-3 md:gap-10 lg:gap-20">
-              <div className="flex flex-col w-full">
-                <Label htmlFor="interest">What you are interested in</Label>
-                <Input
-                  disabled={loading}
-                  type="text"
-                  name="interest"
-                  placeholder="e.g., WebApp Development & Landing Page"
-                  value={formData.interest}
-                  onChange={handleChange}
-                />
-              </div>
+            
+            <div className="flex flex-col w-full">
+              <Label htmlFor="interest">What you are interested in</Label>
+              <Input
+                disabled={loading}
+                type="text"
+                name="interest"
+                placeholder="e.g., WebApp Development & Landing Page"
+                value={formData.interest}
+                onChange={handleChange}
+              />
             </div>
 
+            
             <div>
               <Label htmlFor="message">Message</Label>
               <textarea
@@ -131,9 +135,10 @@ const ContactPage = () => {
               />
             </div>
 
+            
             <button
               type="submit"
-              className="flex items-center justify-center bg-primary text-primaryWhite w-full md:w-1/2 py-2.5 gap-1"
+              className="flex items-center justify-center bg-primary text-white w-full md:w-1/2 py-2.5 rounded-lg gap-2 transition-all duration-200 hover:bg-primary/90"
             >
               {loading ? "Sending..." : "Just Send"}{" "}
               {loading ? (
@@ -143,12 +148,14 @@ const ContactPage = () => {
               )}
             </button>
 
+            
             {errorMessage && (
-              <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
+              <p className="text-red-500 text-sm mt-2 text-center">{errorMessage}</p>
             )}
           </form>
         </div>
 
+        
         {success && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -156,7 +163,7 @@ const ContactPage = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
           >
-            <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full mx-4">
+            <div className="bg-white rounded-lg shadow-xl p-6 max-w-sm w-full mx-4">
               <div className="text-center">
                 <motion.div
                   initial={{ scale: 0 }}
@@ -170,15 +177,16 @@ const ContactPage = () => {
                 >
                   <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
                 </motion.div>
-                <h2 className="mt-6 text-3xl font-bold text-gray-900">
-                  Success!
-                </h2>
+                <h2 className="mt-4 text-2xl font-bold text-gray-900">Success!</h2>
                 <p className="mt-2 text-base font-medium text-gray-600">
-                  Your message has been sent successfully. We&apos;ll get back to you soon!
+                  Your message has been sent successfully. We'll get back to you soon!
                 </p>
               </div>
-              <div className="mt-5 bg-primary/80 text-primaryWhite py-2 rounded-lg font-semibold tracking-wide hover:bg-primary hoverEffect">
-                <button onClick={() => setSuccess(false)} className="w-full">
+              <div className="mt-5">
+                <button
+                  onClick={() => setSuccess(false)}
+                  className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-primary/90"
+                >
                   Close
                 </button>
               </div>
