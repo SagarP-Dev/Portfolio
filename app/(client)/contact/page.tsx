@@ -180,7 +180,7 @@ const ContactPage = () => {
                 </motion.div>
                 <h2 className="mt-4 text-2xl font-bold text-gray-900">Success!</h2>
                 <p className="mt-2 text-base font-medium text-gray-600">
-                  Your message has been sent successfully. We'll get back to you soon!
+                  Your message has been sent successfully. We&apos;ll get back to you soon!
                 </p>
               </div>
               <div className="mt-5">
