@@ -14,7 +14,7 @@ const data = [
     icon: <Dice5 size={50} />,
     title: "Backend Development",
     description:
-      "Developing robust server-side applications with Node.js, Express.js, and MongoDB to power web applications.",
+      "Developing robust server-side applications with Python, Node.js, Express.js, Django, SQL, and MongoDB to power web applications.",
   },
   {
     icon: <LoaderPinwheel size={50} />,
