@@ -12,8 +12,8 @@ const data = [
   {
     title: "Skills & Technologies",
     description:
-      "Proficient in modern web technologies including React.js, Node.js, Express.js, and MongoDB. Passionate about learning new tools to enhance web performance and user experience.",
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "Git & GitHub"],
+      "Proficient in modern web technologies including Python, Django, React.js, Node.js, Express.js, SQL, and MongoDB. Passionate about learning new tools to enhance web performance and user experience.",
+    skills: ["HTML", "CSS", "JavaScript", "Python", "Django", "React.js", "Next.js", "Node.js", "Express.js", "SQL", "MongoDB", "Git & GitHub"],
   },
   {
     title: "Certifications & Achievements",
