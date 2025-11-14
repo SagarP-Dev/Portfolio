@@ -17,13 +17,16 @@ const BlogPage = () => {
               height={192}
             />
           </div>
+
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-darkOrange font-bold">
               Full Stack Developer
             </div>
+
             <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-darkColor sm:text-4xl">
               Sagar Trushna Panigrahi
             </h1>
+
             <p className="mt-4 max-w-2xl text-lg text-darkColor/80">
               Passionate about building scalable and efficient software
               solutions.
@@ -31,24 +34,28 @@ const BlogPage = () => {
           </div>
         </div>
 
+        {/* ABOUT ME */}
         <div className="px-8 py-6">
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
+
           <p className="text-darkColor/80 mb-4">
-          As a passionate full-stack developer specializing in Python, I love building dynamic and user-friendly
-           applications. My journey in web development has been driven by curiosity, problem-solving, and a 
-           strong foundation in Python technologies like Django, along with experience in React, Node.js, and 
-           Express. I enjoy writing clean and efficient code while continuously exploring new tools and 
-           technologies. Whether I'm crafting engaging front-end experiences or developing scalable back-end 
-           solutions, I strive to create meaningful and impactful digital products.
+            As a passionate full-stack developer specializing in Python, I love
+            building dynamic and user-friendly applications. My journey in web
+            development has been driven by curiosity, problem-solving, and a
+            strong foundation in Python technologies like Django, along with
+            experience in React, Node.js, and Express.
           </p>
+
           <p className="text-darkColor/80 mb-4">
-          Beyond coding, I actively look for opportunities to collaborate, contribute to open-source projects, 
-          and sharpen my skills. I believe in continuous growth and am always eager to take on new challenges 
-          in the tech world.
+            Beyond coding, I actively look for opportunities to collaborate,
+            contribute to open-source projects, and sharpen my skills.
+          </p>
         </div>
 
+        {/* SKILLS */}
         <div className="px-8 py-6 bg-gray-100">
           <h2 className="text-2xl font-bold mb-4">Skills</h2>
+
           <div className="flex flex-wrap gap-2">
             {[
               "Python",
@@ -81,3 +88,4 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+
