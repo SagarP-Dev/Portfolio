@@ -22,6 +22,8 @@ const SocialLinks = () => {
         <Link
           href={item?.href}
           key={item?.label}
+          target="_blank"
+          rel="noopener noreferrer"
           className="border border-darkOrange/50 p-2 rounded-lg text-primary/80 hover:border-darkOrange hover:text-darkOrange hover:bg-darkOrange/5 hoverEffect"
         >
           <span>{item?.icon}</span>
