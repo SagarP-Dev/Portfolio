@@ -51,7 +51,6 @@ const BlogPage = () => {
           <h2 className="text-2xl font-bold mb-4">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {[
-              {[
               "Python",
               "Django",
               "Fast API",
