@@ -34,20 +34,17 @@ const BlogPage = () => {
         <div className="px-8 py-6">
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
           <p className="text-darkColor/80 mb-4">
-          As a passionate full-stack developer specializing in the MERN stack, I love building
-          dynamic and user-friendly applications. My journey in web development has been driven
-          by curiosity, problem-solving, and a strong foundation in JavaScript technologies
-          like React and Node.js.
-
-          I enjoy writing clean and efficient code while continuously learning and exploring new 
-          technologies. Whether it&apos;s crafting engaging front-end experiences or developing 
-          scalable back-end solutions, I strive to create impactful digital experiences.
+          As a passionate full-stack developer specializing in Python, I love building dynamic and user-friendly
+           applications. My journey in web development has been driven by curiosity, problem-solving, and a 
+           strong foundation in Python technologies like Django, along with experience in React, Node.js, and 
+           Express. I enjoy writing clean and efficient code while continuously exploring new tools and 
+           technologies. Whether I'm crafting engaging front-end experiences or developing scalable back-end 
+           solutions, I strive to create meaningful and impactful digital products.
           </p>
           <p className="text-darkColor/80 mb-4">
-          Beyond coding, I actively seek opportunities to collaborate, contribute to open-source 
-          projects, and refine my skills. I believe in continuous growth and am always eager to 
-          take on new challenges in the tech world!
-          </p>
+          Beyond coding, I actively look for opportunities to collaborate, contribute to open-source projects, 
+          and sharpen my skills. I believe in continuous growth and am always eager to take on new challenges 
+          in the tech world.
         </div>
 
         <div className="px-8 py-6 bg-gray-100">
